@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+  </head>
+  <style>
+      p,a{
+          font-size: 16px;
+          color: black;
+      }
+      .cl-logo-1{
+          color:#FDBC11;
+      }
+      .cl-logo-2{
+          background-color: #51AEE1;
+      }
+      @media(max-width:500px){
+        .responsive-nav-mobi{
+          display: flex;
+        }
+        .Product_Services_lap{
+            display: none;
+        }
+        .Product_Services_mobi{
+            display: block;
+        }
+        .Managed_Services_lap{
+            display: none;
+        }
+        .Managed_Services_mobi{
+            display: block;
+        }
+        .partners_us_lap{
+            display: none;
+        }
+        .partners_us_mobi{
+            display: block;
+        }
+        #collapsibleNavId{
+            position: relative;
+            left: 20px;
+        }
+      }
+      @media(min-device-width: 500px) and (max-device-width: 1500px){
+        .Managed_Services_mobi{
+            display: none;
+        }
+        .Product_Services_mobi{
+            display: none;
+        }
+        .partners_us_mobi{
+            display: none;
+        }
+      }
+      .career_glink *{
+        color: white;
+      }
+      .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+        input.how_find::placeholder {
+            text-align: right;
+        }
+        #myInputautocomplete-list:hover {
+            cursor: pointer;
+        }
+        #myInputautocomplete-list{
+            border: 1px solid black;
+        }
+        .footer_glink{
+            background-color: #232323;
+        }
+        .footer_glink p{
+            color: white;
+        }
+        .footer_glink h4{
+            color: white;
+        }
+
+
+
+        .search-box{
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        }
+        .input-search{
+        height: 40px;
+        width: 40px;
+        border-style: none;
+       
+        font-size: 18px;
+        letter-spacing: 2px;
+        outline: none;
+        border-radius: 50%;
+        transition: all .5s ease-in-out;
+        background-color: #ffffff;
+        padding-right: 40px;
+        color:rgb(0, 0, 0);
+        }
+        .input-search::placeholder{
+        color:rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: 100;
+        }
+        .btn-search{
+        width: 40px;
+        height: 40px;
+        border-style: none;
+        font-size: 20px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        border-radius: 50%;
+        position: absolute;
+        right: 0px;
+        color:#ffffff ;
+        background-color:transparent;
+        pointer-events: painted;  
+        }
+        .btn-search:focus ~ .input-search{
+        width: 200px;
+        border-radius: 0px;
+        background-color: transparent;
+        border-bottom:1px solid rgba(255,255,255,.5);
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+        .input-search:focus{
+        width: 200px;
+        border-radius: 0px;
+        background-color: transparent;
+        border-bottom:1px solid rgba(255,255,255,.5);
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }        
+  </style>
+  <body>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+    </div>
+    <div style="background: url(a1.png);background-size: 100%;position: relative;">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <a class="navbar-brand col-md-2 col-6" href="#"><img style="width: 220px;" src="a2.png" alt=""></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <div class="d-flex  mx-2 ml-auto">
+                    <ul class=" navbar-nav">
+                        <li class="nav-item active">
+                            <a style="color: #FDBC11;" class="nav-link cl-logo-1" href="#">Home</a>
+                        </li>
+                        <li onclick="smoothScroll(document.getElementById('our_service'))" class="nav-item">
+                            <a class="nav-link" href="#">Our Service</a>
+                        </li>
+                        <li onclick="smoothScroll(document.getElementById('career_at_glink'))" class="nav-item">
+                            <a class="nav-link" href="#">Career At Glink</a>
+                        </li>
+                        <li onclick="smoothScroll(document.getElementById('partners_us'))" class="nav-item">
+                            <a class="nav-link" href="#">Partners Us</a>
+                        </li>
+                        <li class="nav-item" onclick="smoothScroll(document.getElementById('contact_us'))">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ml-lg-5">
+                        <div class="search-box">
+                            
+                            <button class="btn-search p-0">
+                                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="40" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path style="color: black;" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                            <input type="text" class="input-search" placeholder="Search...">
+                        </div>
+                        <div style="width: 2px;height: 20px;background: #050505;margin-top: 10px;margin-left: 13px;"></div>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"  aria-expanded="false" aria-haspopup="true">Global</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#tab2Id">English</a>
+                                <a class="dropdown-item" href="#tab3Id">Tiếng Việt</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid p-lg-5 d-lg-flex py-4">
+            <div class="col-lg-6 col-12 my-auto text-center">
+                <div style="max-width:400px">
+                    <h2 style="font-size: calc(12px + 1.5vw);">SOFTWARE ENGINEERING STAFFING AGENCY IN</h2>
+                    <h2 style="font-size: calc(12px + 1.5vw); color: #FDBC11;">VIETNAM</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12 text-justify">
+                <img style="width: 90%;display: inherit;margin: 0 auto;" src="a3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="m-lg-4 my-4" id="our_service">
+        <div class="m-lg-5"><h4 class="text-center cl-logo-1">Our Services</h4></div>
+        <div class="container-fluid d-lg-flex">
+            <div class="col-lg-6 p-0">
+                <img width="100%" src="b1.png" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="mx-lg-5 my-lg-2">
+                    <h4 class="mt-4">Digital Transformation</h4>
+                    <hr width="70%" style="border-top: 2px solid #FDBC11;" align="left" />
+                    <p>Our digital transformation leverages a wide spectrum of digital technologies to help support and accelerate your organization’s journey to unlock barriers to innovation, meeting evolving business demands.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-lg-flex Product_Services_lap">
+            <div class="col-lg-6">
+                <div class="mx-lg-5 my-lg-2">
+                    <h4 >Product Services</h4>
+                    <hr width="70%" style="border-top: 2px solid #FDBC11;" align="left" />
+                    <p>Hitachi Vantara Vietnam  provides a broad range of reliable and outstanding software development outsourcing services, from custom software development to R&D outsourcing, from Business Analytics, Manufacturing Execution/Control Systems, and Business/Enterprise Applications to Embedded Mobile Applications/Middleware.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0">
+                <img width="100%" src="b2.png" alt="">
+            </div>      
+        </div>
+        <div class="Product_Services_mobi">
+            <div class="col-lg-6 p-0">
+                <img width="100%" src="b2.png" alt="">
+            </div>      
+            <div class="col-lg-6">
+                <div class="mx-lg-5 my-lg-2">
+                    <h4 class="mt-4">Product Services</h4>
+                    <hr width="70%" style="border-top: 2px solid #FDBC11;" align="left" />
+                    <p>Hitachi Vantara Vietnam  provides a broad range of reliable and outstanding software development outsourcing services, from custom software development to R&D outsourcing, from Business Analytics, Manufacturing Execution/Control Systems, and Business/Enterprise Applications to Embedded Mobile Applications/Middleware.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-lg-flex">
+            <div class="col-lg-6 p-0">
+                <img width="100%" src="b3.png" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="mx-lg-5 my-lg-2">
+                    <h4 class="mt-4">Enterprise Applications</h4>
+                    <hr width="70%" style="border-top: 2px solid #FDBC11;" align="left" />
+                    <p>Our Enterprise Applications offer a full range of SAP solutions (ERP, Human Capital Management, SuccessFactors, Business Intelligent Analytics, Development & Integration), helping your business's growth and change become more manageable and leading the way to optimize operational efficiency.</p>
+                </div>
+            </div>
+        </div>
+        <div  class="container-fluid d-lg-flex Managed_Services_lap">
+            <div class="col-lg-6">
+                <div class="mx-lg-5 my-lg-2">
+                    <h4>Managed Services</h4>
+                    <hr width="70%" style="border-top: 2px solid #FDBC11;" align="left" />
+                    <p>HCC-GCS Managed Service leverages our 20-years expertise in IT software industry as well as closed connections with high-end IT services vendors, we offer a continuous oversight for both IT infrastructure and software application of businesses.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 p-0">
+                <img width="100%" src="b4.png" alt="">
+            </div>      
+        </div>
+        <div class="Managed_Services_mobi">
+            <div class="col-lg-6 p-0">
+                <img width="100%" src="b4.png" alt="">
+            </div> 
+            <div class="col-lg-6">
+                <div class="mx-lg-5 my-lg-2">
+                    <h4 class="mt-4">Managed Services</h4>
+                    <hr width="70%" style="border-top: 2px solid #FDBC11;" align="left" />
+                    <p>HCC-GCS Managed Service leverages our 20-years expertise in IT software industry as well as closed connections with high-end IT services vendors, we offer a continuous oversight for both IT infrastructure and software application of businesses.</p>
+                </div>
+            </div>     
+        </div>
+    </div>
+    <div id="career_at_glink" class="career_glink" style="background-position: center;background-attachment: fixed;background-size: cover;background-image: linear-gradient(0deg,rgba(98,80,0,0.74),rgba(98,80,0,0.74)),url(c1.png);" class="my-lg-5">
+        <div class="py-lg-4 py-4">
+            <div class="p-lg-4"><h4 class="text-center">CAREER AT GLINK</h4></div>
+            <div class="col-lg-6 col-12 m-lg-auto m-auto "><p class="text-center">We welcome hearing from passionate candidates who wish to venture into the internet industry and desire a dynamic, youthful and challenging working environment.</p></div>
+            <div class="text-center my-lg-5"><button class="cl-logo-2 btn text-light">APPLY NOW</button></div>
+        </div>
+    </div>
+    <div class="cl-logo-2" id="partners_us">
+        <div class="py-lg-4 py-4">
+            <div class="p-lg-4"><h4 class="text-center text-light">PARTNERS</h4></div>
+            <div class=" col-lg-6 col-12 m-lg-auto m-auto"><p class="text-center text-light">This is testament to the effective and rewarding cooperation we undertake with like-minded local and global partners. We are proud to share our partner list.</p></div>
+            <div class="d-lg-flex p-lg-3 carousel slide  partners_us_lap" data-ride="carousel">
+                <div id="demo" class="carousel slide w-100" data-ride="carousel">
+                    <ul style="opacity: 0;z-index: -1;" class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div style="display: flex;" class="">
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d1.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d2.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d3.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d4.png" alt=""></div></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div style="display: flex;" class="">
+                                
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d5.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d6.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d7.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 150px;"><img height="100%" width="100%" src="d8.png" alt=""></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Left and right controls -->
+                    <a style="width: 40px;left: 20px;" class="carousel-control-prev" href="#demo" data-slide="prev">
+                      
+                      <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </a>
+                    <a style="width: 40px;right: 20px;" class="carousel-control-next" href="#demo" data-slide="next">
+                        <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                  </div>
+            </div>
+            <div class="carousel slide  partners_us_mobi" data-ride="carousel">
+                <div id="demo1" class="carousel slide w-100" data-ride="carousel">
+                    <ul style="opacity: 0;z-index: -1;" class="carousel-indicators">
+                      <li data-target="#demo1" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo1" data-slide-to="1"></li>
+                      <li data-target="#demo1" data-slide-to="2"></li>
+                      <li data-target="#demo1" data-slide-to="3"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div style="display: flex;" class="">
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d1.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d2.png" alt=""></div></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div style="display: flex;" class="">
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d3.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d4.png" alt=""></div></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div style="display: flex;" class="">
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d5.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d6.png" alt=""></div></div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div style="display: flex;" class="">
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d7.png" alt=""></div></div>
+                                <div class="col-lg-3 col-6"><div style="background-color: white;width: 100%;height: 100px;"><img height="100%" width="100%" src="d8.png" alt=""></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Left and right controls -->
+                    <a style="width: 40px;left: 20px;" class="carousel-control-prev" href="#demo1" data-slide="prev">
+                      <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                      </svg>
+                    </a>
+                    <a style="width: 40px;right: 20px;" class="carousel-control-next" href="#demo1" data-slide="next">
+                        <svg style="color: rgb(0, 0, 0);" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </a>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact_us" class="">
+        <div class="p-lg-4 py-4">
+            <div class="p-lg-4"><h4 class="text-center cl-logo-1">TELL US ABOUT YOUR PROJECT</h4></div>
+            <div class="d-lg-flex">
+                <div class="col-lg-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d872.812002286975!2d106.69483495467992!3d10.827100902877081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f3f65e4c3d%3A0x8c36c73765913ce3!2zQ8O0bmcgVHkgVHLDoWNoIE5oaeG7h20gSOG7r3UgSOG6oW4gR2nhuqNpIFBow6FwIEPDtG5nIE5naOG7hyBHbGluaw!5e0!3m2!1svi!2s!4v1642218639678!5m2!1svi!2s" width="95%" height="93%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div> 
+                <div class="col-lg-6">
+                    <div class="row justify-content-center">
+                        <div class="w-100">
+                            <div class="card-body">
+
+                                <form class="form-horizontal" method="post" action="#">
+
+                                    <div class="form-group">
+                                        <label for="name" class="d-lg-flex cols-sm-2 control-label">
+                                            <p class="mb-0">Your Name -</p>
+                                            <p class="ml-lg-1 cl-logo-1 mb-0">Required</p>
+                                        </label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="d-lg-flex cols-sm-2 control-label">
+                                            <p class="mb-0">Your Email -</p>
+                                            <p class="ml-lg-1 cl-logo-1 mb-0">Required</p>
+                                        </label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="email" class="form-control" name="name" id="name" placeholder="Enter your Email" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="d-lg-flex cols-sm-2 control-label">
+                                            <p class="mb-0">Your Phone Number -</p>
+                                            <p class="ml-lg-1 cl-logo-1 mb-0">Required</p>
+                                        </label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                <input type="number" class="form-control" name="name" id="name" placeholder="Enter your Phone Number " />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name" class="d-lg-flex cols-sm-2 control-label">
+                                            <p class="mb-0">How Did You Find Us</p>
+                                        </label>
+                                        <div class="w-100">
+                                            <form autocomplete="off" action="/action_page.php">
+                                                <div class="autocomplete w-100">
+                                                  <input class="form-control rounded-0 how_find" id="myInput" type="text" name="myCountry" placeholder='Your Message'>
+                                                </div>
+                                              </form>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" style="background-color:#FDBC11;" class="btn text-light rounded-0">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_glink d-lg-flex p-lg-4">
+        <div class="py-lg-3 d-lg-flex py-4 ml-3">
+            <div class="col-lg-3">
+                <h4>ABOUT US</h4>
+                <div>
+                    <p>Our Strengths:</br> – Over 6 years of experience</br> – Supporting more than 200+ clients </br>– Team of 50+ experienced devs</br> – Specializing in eCommerce development</p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h4>OUR SERVICES</h4>
+                <div>
+                    <p>– Mobile App Development</br> – Website Development</br> – QA & QC Services</br> – Custom Software Development</p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h4>CONTACT INFO</h4>
+                <div class="mb-3">
+                    <p class="mb-0">449/38A, Tam Dong 11A Lane, Group 13, Hamlet 6, Dong Thanh Village, Hoc Mon Town, Ho Chi Minh City +(84) 973 883 759 owner.glinking@gmail.com</p>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: white;" width="20" height="20" fill="currentColor" class="bi bi-facebook " viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                          </svg>
+                          <svg style="color: white;margin-left:10px" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <h4>WHY CHOOSE US?</h4>
+                <div>
+                    <p>Here are the top reasons why you should work with us Simple working process Global corporation Our workforce power Deep cultures knowledge</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function autocomplete(inp, arr) {
+          var currentFocus;
+          inp.addEventListener("input", function(e) {
+              var a, b, i, val = this.value;
+              closeAllLists();
+              if (!val) { return false;}
+              currentFocus = -1;
+              a = document.createElement("DIV");
+              a.setAttribute("id", this.id + "autocomplete-list");
+              a.setAttribute("class", "autocomplete-items");
+              this.parentNode.appendChild(a);
+              for (i = 0; i < arr.length; i++) {
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                  
+                  b = document.createElement("DIV");
+                  
+                  b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                  b.innerHTML += arr[i].substr(val.length);
+                 
+                  b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                  
+                  b.addEventListener("click", function(e) {
+                     
+                      inp.value = this.getElementsByTagName("input")[0].value;
+                     
+                      closeAllLists();
+                  });
+                  a.appendChild(b);
+                }
+              }
+          });
+          
+          inp.addEventListener("keydown", function(e) {
+              var x = document.getElementById(this.id + "autocomplete-list");
+              if (x) x = x.getElementsByTagName("div");
+              if (e.keyCode == 40) {
+               
+                currentFocus++;
+               
+                addActive(x);
+              } else if (e.keyCode == 38) { //up
+                
+                currentFocus--;
+               
+                addActive(x);
+              } else if (e.keyCode == 13) {
+             
+                e.preventDefault();
+                if (currentFocus > -1) {
+                
+                  if (x) x[currentFocus].click();
+                }
+              }
+          });
+          function addActive(x) {
+           
+            if (!x) return false;
+          
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            
+            x[currentFocus].classList.add("autocomplete-active");
+          }
+          function removeActive(x) {
+           
+            for (var i = 0; i < x.length; i++) {
+              x[i].classList.remove("autocomplete-active");
+            }
+          }
+          function closeAllLists(elmnt) {
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+              if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+              }
+            }
+          }
+          document.addEventListener("click", function (e) {
+              closeAllLists(e.target);
+          });
+        }
+        var countries = ["Zalo","Yahoo","Email","Chat","Facebook"];
+        autocomplete(document.getElementById("myInput"), countries);
+
+
+        window.smoothScroll = function(target) {
+            var scrollContainer = target;
+            do { //find scroll container
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
+            
+            var targetY = 0;
+            do { //find the top of target relatively to the container
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+            
+            scroll = function(c, a, b, i) {
+                i++; if (i > 30) return;
+                c.scrollTop = a + (b - a) / 30 * i;
+                setTimeout(function(){ scroll(c, a, b, i); }, 20);
+            }
+            // start scrolling
+            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
+
